@@ -3,7 +3,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "baseUrl": "./src",
+    "paths": {
+      "@environments/*": [ "environments/*" ],
+      "@components/*": [ "app/components/*" ],
+      "@services/*": [ "app/services/*" ],
+      "@interfaces/*": [ "app/interfaces/*" ],
+      "@utils/*": [ "app/utils/*" ]
+    },
   },
   "files": [
     "src/main.ts",
@@ -11,5 +19,12 @@
   ],
   "include": [
     "src/**/*.d.ts"
-  ]
+  ],
+  "exclude": ["test.ts", "**/*.spec.ts"],
+  "angularCompilerOptions": {
+    "annotationsAs": "static fields",
+    "annotateForClosureCompiler": true,
+    "preserveWhitespaces": false,
+    "fullTemplateTypeCheck": true
+  }
 }
