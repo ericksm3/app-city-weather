@@ -1,0 +1,30 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "baseUrl": "./src",
+    "paths": {
+      "@environments/*": [ "environments/*" ],
+      "@components/*": [ "app/components/*" ],
+      "@services/*": [ "app/services/*" ],
+      "@interfaces/*": [ "app/interfaces/*" ],
+      "@utils/*": [ "app/utils/*" ]
+    },
+  },
+  "files": [
+    "src/main.ts",
+    "src/polyfills.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ],
+  "exclude": ["test.ts", "**/*.spec.ts"],
+  "angularCompilerOptions": {
+    "annotationsAs": "static fields",
+    "annotateForClosureCompiler": true,
+    "preserveWhitespaces": false,
+    "fullTemplateTypeCheck": true
+  }
+}
