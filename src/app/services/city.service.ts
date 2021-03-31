@@ -12,7 +12,10 @@ export class CityService {
             { id: 2759794, name: 'amsterdam' },
             { id: 2950158, name: 'berlin' },
             { id: 2968815, name: 'paris' },
-            { id: 2673722, name: 'stockholm' }
+            { id: 2673730, name: 'stockholm' },
+            { id: 1850147, name: 'tokyo' },
+            { id: 6255012, name: 'flinders'},
+            { id: 7910072, name: 'new zealand' }
         ];
 
         return Promise.resolve(mockCities)

@@ -8,7 +8,9 @@
       "@components/*": [ "app/components/*" ],
       "@services/*": [ "app/services/*" ],
       "@interfaces/*": [ "app/interfaces/*" ],
-      "@utils/*": [ "app/utils/*" ]
+      "@utils/*": [ "app/utils/*" ],
+      "@directives/*": [ "app/directives/*" ],
+      "@interceptors/*": [ "app/interceptors/*" ],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

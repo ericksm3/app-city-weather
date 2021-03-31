@@ -11,19 +11,17 @@ import { City } from '@interfaces/city';
   selector: 'app-weather-report',
   templateUrl: './weather-report.component.html',
   styleUrls: ['./weather-report.component.scss'],
-  providers: [ WeatherService ]
+  providers: [ CityService ]
 })
 
 export class WeatherReportComponent implements OnInit {
 
-  cityWeathers: CityWeather[] = [];
+  cities: City[] = [];
 
   constructor(
-    private weatherService: WeatherService,
     private cityService: CityService,
     
   ) { 
-    this.weatherService = weatherService;
     this.cityService = cityService;
   }
 
@@ -31,16 +29,9 @@ export class WeatherReportComponent implements OnInit {
     this.handleGetCitiesWeathers();
   }
 
-  async handleGetCitiesWeathers() {
+  async handleGetCitiesWeathers(): Promise<void> {
     //get cities from CityService (mocked)
     const cities: City[] = await this.cityService.getCities();
-
-    //building requests
-    const requests = cities.map((city : any) => this.weatherService.getCityWeather(city.id));
-  
-    //queueing requests
-    const cityWeathers : CityWeather[] = await Promise.all(requests);
-
-    this.cityWeathers = cityWeathers;
+    this.cities = cities;
   }
 }

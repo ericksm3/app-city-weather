@@ -10,6 +10,8 @@
       "@components/*": [ "app/components/*" ],
       "@services/*": [ "app/services/*" ],
       "@interfaces/*": [ "app/interfaces/*" ],
+      "@directives/*": [ "app/directives/*" ],
+      "@interceptors/*": [ "app/interceptors/*" ],
       "@utils/*": [ "app/utils/*" ]
     },
   },
