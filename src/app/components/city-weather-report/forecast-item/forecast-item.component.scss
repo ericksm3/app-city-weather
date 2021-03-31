@@ -1,0 +1,18 @@
+.forecast-item {
+    font-size: 12px;
+    margin: 2px 0;
+    display: block;
+    width: 100px;
+    white-space: nowrap;
+
+    &__icon {
+        display: inline-block;
+        width: 15px;
+        text-align: center;
+        margin-right: 10px;
+    }
+
+    &__label {
+        display: inline-block;
+    }
+}
