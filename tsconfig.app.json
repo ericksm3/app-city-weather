@@ -12,7 +12,8 @@
       "@interfaces/*": [ "app/interfaces/*" ],
       "@directives/*": [ "app/directives/*" ],
       "@interceptors/*": [ "app/interceptors/*" ],
-      "@utils/*": [ "app/utils/*" ]
+      "@common/*": [ "app/common/*" ],
+      "@pipes/*": [ "app/pipes/*" ]
     },
   },
   "files": [

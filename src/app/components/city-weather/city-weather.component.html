@@ -1,0 +1,38 @@
+<div
+    class="city-weather"
+    [weatherTheme]="getCustomTheme()"
+    (click)="fetchHourlyWeather()"
+>
+    <div *ngIf="cityWeather" class="city-weather__body">
+
+        <!--city name and forecast-->
+        <div class="city-weather__city-forecast">
+            <app-city-forecast
+                [weather]="cityWeather.weather[0]"
+                [name]="cityWeather.name"
+                [country]="cityWeather.sys.country"
+            ></app-city-forecast>
+        </div>
+
+        <!--city forecast details-->
+        <div class="city-weather__forecast-details">
+            <app-forecast-details
+                [cityWeather]="cityWeather"
+            ></app-forecast-details>
+        </div>
+
+        <!--city hourly forecast-->
+        <div class="city-weather__forecast-hourly" *ngIf="open">
+            <app-forecast-hourly
+                *ngIf="hours"
+                [hours]="hours"
+                timezone="{{cityWeather.timezone}}"
+            ></app-forecast-hourly>
+            
+            <app-loader *ngIf="!hours"></app-loader>
+        </div>
+    </div>
+
+    <!-- generic loader -->
+    <app-loader *ngIf="!cityWeather"></app-loader>
+</div>

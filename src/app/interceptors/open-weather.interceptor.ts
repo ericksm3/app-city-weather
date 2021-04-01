@@ -8,7 +8,7 @@ import {
 import { Observable } from 'rxjs';
 
 import { environment } from '@environments/environment';
-import { OPEN_WEATHER_API_KEY } from '@utils/constants';
+import { OPEN_WEATHER_API_KEY, UNITS, UNIT_TYPE } from '@common/constants';
 
 @Injectable()
 export class OpenWeatherInterceptor implements HttpInterceptor {
@@ -19,7 +19,10 @@ export class OpenWeatherInterceptor implements HttpInterceptor {
     request = request.clone({
       params: request.params.set(OPEN_WEATHER_API_KEY, environment.apiKey)
     });
-  
+    request = request.clone({
+      params: request.params.set(UNITS, UNIT_TYPE)
+    });
+
     return next.handle(request);
   }
 }

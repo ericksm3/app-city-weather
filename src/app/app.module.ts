@@ -4,25 +4,39 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 
-//components
+// components
 import { AppComponent } from './app.component';
 import { WeatherReportComponent } from '@components/weather-report/weather-report.component';
-import { CityWeatherReportComponent } from '@components/city-weather-report/city-weather-report.component';
+import { CityWeatherComponent } from '@components/city-weather/city-weather.component';
 
-//intercepto
+// intercepto
 import { OpenWeatherInterceptor } from '@interceptors/open-weather.interceptor';
 import { WeatherThemeDirective } from '@directives/weather-theme.directive';
-import { ReportForecastComponent } from '@components/city-weather-report/report-forecast/report-forecast.component';
-import { ForecastItemComponent } from '@components/city-weather-report/forecast-item/forecast-item.component';
+import { ForecastItemComponent } from '@components/forecast-item/forecast-item.component';
+import { TimezoneDatePipe } from '@pipes/timezone-date.pipe';
+import { TimezoneDayPipe } from '@pipes/timezone-day.pipe';
+import { CityForecastComponent } from '@components/city-forecast/city-forecast.component';
+import { LoaderComponent } from '@components/loader/loader.component';
+import { WeatherIconComponent } from '@components/weather-icon/weather-icon.component';
+import { ForecastDetailsComponent } from '@components/forecast-details/forecast-details.component';
+import { ForecastHourlyComponent } from '@components/forecast-hourly/forecast-hourly.component';
+import { CelsiusPipe } from '@pipes/celsius.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherReportComponent,
-    CityWeatherReportComponent,
+    CityWeatherComponent,
     WeatherThemeDirective,
-    ReportForecastComponent,
-    ForecastItemComponent
+    ForecastItemComponent,
+    TimezoneDatePipe,
+    TimezoneDayPipe,
+    CityForecastComponent,
+    LoaderComponent,
+    WeatherIconComponent,
+    ForecastDetailsComponent,
+    ForecastHourlyComponent,
+    CelsiusPipe
   ],
   imports: [
     BrowserModule,

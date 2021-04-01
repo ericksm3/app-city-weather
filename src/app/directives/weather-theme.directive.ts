@@ -9,7 +9,15 @@ export class WeatherThemeDirective implements OnChanges {
   constructor(private el: ElementRef<HTMLElement>) {
   }
 
-  ngOnChanges() {
+  ngOnChanges(): void {
+    /*
+    writing variable on DOM element to be used as theme
+
+    interface WeatherTheme
+    --primary
+    --secondary
+    --tertiary
+    */
     Object.keys(this.theme).forEach(prop => {
       this.el.nativeElement.style.setProperty(`--${prop}`, this.theme[prop]);
     });

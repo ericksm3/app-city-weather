@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { faThermometerEmpty, faWind, faClock, faBullseye } from '@fortawesome/free-solid-svg-icons';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 
 @Component({
@@ -9,13 +8,13 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 })
 export class ForecastItemComponent implements OnInit {
 
-  @Input('icon') icon!: IconDefinition
-  @Input('label') label!: any
-  
+  @Input('icon') icon!: IconDefinition;
+  @Input('label') label!: any;
+
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.icon, this.label)
+
   }
 
 }

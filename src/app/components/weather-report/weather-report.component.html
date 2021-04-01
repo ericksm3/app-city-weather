@@ -1,6 +1,14 @@
 <div>
-    <app-city-weather-report
-        *ngFor="let city of cities"
-        [city]="city"
-    ></app-city-weather-report>
+    <select (change)="setLocation($event)">
+        <option *ngFor="let opt of options" value="{{opt.value}}">
+            {{opt.label}}
+        </option>
+    </select>
+    <div class="weather-report">
+        <div *ngFor="let city of cities">
+            <app-city-weather
+                [city]="city"
+            ></app-city-weather>
+        </div>
+    </div>
 </div>

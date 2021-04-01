@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { environment } from '@environments/environment';
-
-import { CityWeather } from '@interfaces/city-weather';
+import { CityWeather, Hourly } from '@interfaces/index';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +13,12 @@ export class WeatherService {
     this.http = http;
   }
 
-  getCityWeather(cityId: number) : Observable<CityWeather> {
-    return this.http.get<CityWeather>(`${environment.baseUrl}/weather?id=${cityId}&units=metric`);
-  };
+  getCityWeather(cityId: number): Observable<CityWeather> {
+    return this.http.get<CityWeather>(`${environment.baseUrl}/weather?id=${cityId}`);
+  }
 
-  getCityHourlyWeather(cityId: number) : Observable<CityWeather> {
-    return this.http.get<CityWeather>(`${environment.baseUrl}/forecast/hourly?id=${cityId}`);
+  getCityHourlyWeather(lat: number, lon: number): Observable<Hourly> {
+    return this.http.get<Hourly>(`${environment.baseUrl}/onecall?lat=${lat}&lon=${lon}&exclude=current,minutely,daily,alerts`);
   }
 }
 

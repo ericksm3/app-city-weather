@@ -1,27 +1,18 @@
-import { Weather } from "./weather";
-import { Temperature } from "./temperature";
-import { Wind } from "./wind";
+import { Weather } from './weather';
+import { Temperature } from './temperature';
+import { Wind } from './wind';
+import { Sys } from './sys';
 
 export interface CityWeather {
-    name: string;
     weather: Weather[];
-    main: Temperature;
+    timezone: number;
+    dt: number;
+    sys: Sys;
     wind: Wind;
-
-    //maybe useless \/
-
-    base: string;
-    clouds: {
-        all: number;
-    };
-    cod: number;
+    name: string;
+    main: Temperature;
     coord: {
         lon: number;
         lat: number;
     };
-    dt: number;
-    id: number;
-    timezone: number;
-    visibility: number;
-    sys: any
 }

@@ -1,0 +1,18 @@
+<div class="forecast-details">
+    <app-forecast-item
+        [icon]="faCalendarAlt" 
+        label="{{cityWeather.dt | timezoneDay: cityWeather.timezone}}"
+    ></app-forecast-item>
+    <app-forecast-item 
+        [icon]="faClock" 
+        label="{{cityWeather.dt | timezoneDate: cityWeather.timezone}}"
+    ></app-forecast-item>
+    <app-forecast-item
+        [icon]="faThermometerEmpty" 
+        label="{{cityWeather.main.temp | celsius}}">
+    </app-forecast-item>
+    <app-forecast-item
+        [icon]="faWind" 
+        label="{{cityWeather.wind.speed}} m/s">
+    </app-forecast-item>
+</div>

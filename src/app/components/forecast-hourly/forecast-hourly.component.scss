@@ -1,0 +1,24 @@
+@import 'src/variables.scss';
+
+.forecast-hourly {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: inherit;
+    flex-basis: 100%;
+    background: $grey-100;
+    color: $grey-300;
+
+    label {
+        font-size: 12px;
+        width: 70px;
+        text-align: center;
+        padding: 5px;
+        border-right: solid 1px $grey-200;
+        flex: 1;
+
+        &:last-child {
+            border: none;
+        }
+
+    }
+}

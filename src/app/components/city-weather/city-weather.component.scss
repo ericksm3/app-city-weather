@@ -1,0 +1,49 @@
+@import 'src/variables.scss';
+
+.city-weather {
+    margin: 30px;
+    display: inline-block;
+    width: 550px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 6px 5px 6px 1px $grey-200;
+    opacity: 0.9;
+    border: solid 1px $grey-200;
+    transition: 0.2s ease-in;
+    &:hover {
+        opacity: 1;
+    }
+
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__city-forecast{
+        flex: 2;
+        cursor: pointer;
+    }
+
+    &__forecast-details {
+        flex: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--tertiary);
+        background: var(--primary);
+    }
+
+    &__forecast-hourly {
+      width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-1){
+        width: 300px;
+        margin: 30px 0;
+        &__body {
+            display: block;
+        }
+    }
+}
