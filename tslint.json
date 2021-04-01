@@ -137,6 +137,7 @@
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
     "no-unused-variable": true,
+    "no-any": true,
     "component-selector": [
       true,
       "element",

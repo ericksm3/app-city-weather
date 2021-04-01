@@ -9,7 +9,7 @@ import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 export class ForecastItemComponent implements OnInit {
 
   @Input('icon') icon!: IconDefinition;
-  @Input('label') label!: any;
+  @Input('label') label!: string;
 
   constructor() { }
 

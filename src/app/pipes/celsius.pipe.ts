@@ -5,8 +5,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class CelsiusPipe implements PipeTransform {
 
-  transform(value: string): string {
-    return `${parseInt(value, 10)} °C`;
+  transform(value: number|undefined) {
+    if(value){
+      return `${parseInt(value.toFixed(), 10)} °C`;
+    }
+    return value;
   }
 
 }

@@ -30,7 +30,7 @@ export class CityWeatherComponent implements OnInit {
     this.weatherService = weatherService;
     this.open = false;
   }
-
+ 
   ngOnInit(): void {
     this.handleGetWeather();
   }
@@ -46,8 +46,9 @@ export class CityWeatherComponent implements OnInit {
     this.customTheme = this.themes[time][key] || this.themes[time].default;
   }
 
-  getCustomTheme(): any {
-    return { ...this.customTheme };
+  getCustomTheme(): WeatherTheme {
+    const customTheme = Object.assign({}, this.customTheme);
+    return customTheme;
   }
 
   handleGetWeather(): void {

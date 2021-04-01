@@ -15,4 +15,5 @@ export interface CityWeather {
         lon: number;
         lat: number;
     };
+    temp?: number;
 }
