@@ -48,28 +48,53 @@ export class MockComponent implements OnInit {
     this.customTheme = this.themes[time][key] || this.themes[time].default;
   }
 
-  getIcon(t: any) {
+  getIcon(t: any, time: any) {
     let icon
-    if(t === "Thunderstorm"){
-      icon = '11d'
+    if(time === 'night'){
+      if(t === "Thunderstorm"){
+        icon = '11d'
+      }
+      else if(t === 'Drizzle'){
+        icon = '09d'
+      }
+      else if(t === 'Rain'){
+        icon = '09d'
+      }
+      else if(t === 'Snow'){
+        icon = '13d'
+      }
+      else if(t === 'Clear'){
+        icon = '01n'
+      }
+      else if(t === 'Clouds'){
+        icon='02n'
+      }
+      else if(t === 'default'){
+        icon = '50d'
+      }
     }
-    else if(t === 'Drizzle'){
-      icon = '09d'
-    }
-    else if(t === 'Rain'){
-      icon = '10d'
-    }
-    else if(t === 'Snow'){
-      icon = '13d'
-    }
-    else if(t === 'Clear'){
-      icon = '01d'
-    }
-    else if(t === 'Clouds'){
-      icon='02d'
-    }
-    else if(t === 'default'){
-      icon = '50d'
+    else {
+      if(t === "Thunderstorm"){
+        icon = '11d'
+      }
+      else if(t === 'Drizzle'){
+        icon = '09d'
+      }
+      else if(t === 'Rain'){
+        icon = '10d'
+      }
+      else if(t === 'Snow'){
+        icon = '13d'
+      }
+      else if(t === 'Clear'){
+        icon = '01d'
+      }
+      else if(t === 'Clouds'){
+        icon='02d'
+      }
+      else if(t === 'default'){
+        icon = '50d'
+      }
     }
 
     return icon
@@ -89,7 +114,7 @@ export class MockComponent implements OnInit {
       visibility: 10000,
       weather: [{
         description: "clear sky",
-        icon: this.getIcon(t),
+        icon: this.getIcon(t, 'night'),
         id: 800,
         main: 'some text'
       }],
