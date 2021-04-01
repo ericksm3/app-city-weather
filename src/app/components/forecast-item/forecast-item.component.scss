@@ -1,3 +1,5 @@
+@import 'src/variables.scss';
+
 .forecast-item {
     font-size: 14px;
     margin: 15px 0;
@@ -13,5 +15,9 @@
     &__label {
         display: inline-block;
         cursor: inherit;
+    }
+
+    @media screen and (max-width: $breakpoint-1){
+        font-size: 12px;
     }
 }
