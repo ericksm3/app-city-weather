@@ -21,6 +21,7 @@ import { WeatherIconComponent } from '@components/weather-icon/weather-icon.comp
 import { ForecastDetailsComponent } from '@components/forecast-details/forecast-details.component';
 import { ForecastHourlyComponent } from '@components/forecast-hourly/forecast-hourly.component';
 import { CelsiusPipe } from '@pipes/celsius.pipe';
+import { MockComponent } from './mock/mock.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CelsiusPipe } from '@pipes/celsius.pipe';
     WeatherIconComponent,
     ForecastDetailsComponent,
     ForecastHourlyComponent,
-    CelsiusPipe
+    CelsiusPipe,
+    MockComponent
   ],
   imports: [
     BrowserModule,
