@@ -14,17 +14,16 @@
 
     &__main {
         font-size: 14px;
+        margin-left: 0;
     }
 
     &__description {
         font-size: 10px;
         text-transform: capitalize;
+        margin-left: 0;
     }
 
     &__details {
         padding-left: 25px;
-        label {
-            display: block;
-        }
     }
  }

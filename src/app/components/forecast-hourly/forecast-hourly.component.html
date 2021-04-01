@@ -1,7 +1,7 @@
-<div class="forecast-hourly">
-    <label *ngFor="let hour of hours">
+<ul class="forecast-hourly">
+    <li *ngFor="let hour of hours" class="forecast-hourly__item">
         {{hour.dt | timezoneDate: timezone}}
         <app-weather-icon icon="{{hour.weather[0].icon}}" size="2x"></app-weather-icon>
         {{hour.temp | celsius}} 
-    </label>
-</div>
+    </li>
+</ul>

@@ -1,9 +1,9 @@
 <div class="city-forecast">
-    <div class="city-forecast__details">
-        <label class="city-forecast__name">{{name}}/{{country}}</label>
-        <label class="city-forecast__main">{{weather.main}}</label>
-        <label class="city-forecast__description">{{weather.description}}</label>
-    </div>
+    <dl class="city-forecast__details">
+        <dt class="city-forecast__name">{{name}}/{{country}}</dt>
+        <dd class="city-forecast__main">{{weather.main}}</dd>
+        <dd class="city-forecast__description">{{weather.description}}</dd>
+    </dl>
 
     <app-weather-icon icon="{{weather.icon}}" size="4x"></app-weather-icon>
 </div>
