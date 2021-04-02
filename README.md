@@ -42,7 +42,10 @@ Run `ng test` or `npm test` to execute the unit tests.
 
 #### Coverage
 
-Run `npm run test:coverage` to generate coverage report inside `coverage\app-city-weather\index.html` folder. This project has 100% code coverage.
+Run `npm run test:coverage` to generate coverage report inside `./coverage/app-city-weather` folder. 
+
+This project has 100% code coverage.
+
 ![Coverage](https://i.ibb.co/kKkjT6K/coverage.jpg)
 
 ## Running tslint
