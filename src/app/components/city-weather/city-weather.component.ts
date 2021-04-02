@@ -30,7 +30,7 @@ export class CityWeatherComponent implements OnInit {
     this.weatherService = weatherService;
     this.open = false;
   }
- 
+
   ngOnInit(): void {
     this.handleGetWeather();
   }
@@ -54,24 +54,26 @@ export class CityWeatherComponent implements OnInit {
   handleGetWeather(): void {
     this.weatherService.getCityWeather(this.city.id).subscribe((cityWeather: CityWeather) => {
       this.cityWeather = cityWeather;
-
       // setting color theme for weather cards
       this.setCustomTheme(cityWeather);
     });
   }
 
-  fetchHourlyWeather(): void {
+  handleClick(): void{
     if (!this.hours) {
-      this.weatherService.getCityHourlyWeather(
-        this.cityWeather.coord.lat,
-        this.cityWeather.coord.lon
-      ).subscribe((hours: Hourly) => {
-        // limiting hours to the next HOURLY_SIZE hours and excluding the current one
-        this.hours = hours.hourly.slice(1, this.HOURLY_SIZE + 1);
-      });
+      this.fetchHourlyWeather();
     }
-
     // toggle hourly forecast
     this.open = !this.open;
+  }
+
+  fetchHourlyWeather(): void {
+    this.weatherService.getCityHourlyWeather(
+      this.cityWeather.coord.lat,
+      this.cityWeather.coord.lon
+    ).subscribe((hours: Hourly) => {
+      // limiting hours to the next HOURLY_SIZE hours and excluding the current one
+      this.hours = hours.hourly.slice(1, this.HOURLY_SIZE + 1);
+    });
   }
 }

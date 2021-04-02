@@ -24,8 +24,7 @@ export class WeatherThemeDirective implements OnChanges {
         primary = 'primary',
         secondary = 'secondary',
         tertiary = 'tertiary'
-      };
-  
+      }
       this.el.nativeElement.style.setProperty(`--${prop}`, this.theme[prop as WeatherThemeEnum]);
     });
   }

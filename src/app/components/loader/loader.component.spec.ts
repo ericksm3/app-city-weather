@@ -19,7 +19,7 @@ describe('LoaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render a loader image', () => {
+    expect(fixture.nativeElement.querySelector('.loader img')).toBeTruthy();
   });
 });

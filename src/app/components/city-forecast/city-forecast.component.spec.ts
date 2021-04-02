@@ -6,9 +6,19 @@ describe('CityForecastComponent', () => {
   let component: CityForecastComponent;
   let fixture: ComponentFixture<CityForecastComponent>;
 
+  const props = {
+    weather: {
+      icon: 'icon',
+      main: 'main',
+      description: 'Description'
+    },
+    country: 'country',
+    name: 'name',
+  };
+
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CityForecastComponent ]
+      declarations: [ CityForecastComponent ],
     })
     .compileComponents();
   });
@@ -16,10 +26,19 @@ describe('CityForecastComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CityForecastComponent);
     component = fixture.componentInstance;
+
+    component.weather = props.weather;
+    component.name = props.name;
+    component.country = props.country;
+
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should render with required properties', () => {
+    const el = fixture.nativeElement;
+    expect(el.querySelector('.city-forecast__name').innerText).toBe(`${props.name}/${props.country}`);
+    expect(el.querySelector('.city-forecast__main').innerText).toBe(props.weather.main);
+    expect(el.querySelector('.city-forecast__description').innerText).toBe(props.weather.description);
+    expect(el.querySelector('app-weather-icon')).toBeTruthy();
   });
 });

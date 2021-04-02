@@ -15,7 +15,7 @@ export const Themes: Theme = {
       Rain: {
         primary: '#4a6583',
         secondary: '#3c5369',
-        tertiary : '#6c8094'
+        tertiary : '#d7dfdf'
       },
       Snow: {
         primary: '#81a4d4',
