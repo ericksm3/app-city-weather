@@ -1,7 +1,7 @@
 <div
     class="city-weather"
     [weatherTheme]="getCustomTheme()"
-    (click)="fetchHourlyWeather()"
+    (click)="handleClick()"
 >
     <div *ngIf="cityWeather" class="city-weather__body">
 

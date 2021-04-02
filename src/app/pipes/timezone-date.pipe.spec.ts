@@ -1,8 +1,11 @@
+import { mockCityWeather } from '@common/mocks';
 import { TimezoneDatePipe } from './timezone-date.pipe';
 
 describe('TimezoneDatePipe', () => {
-  it('create an instance', () => {
+  it('should format time based on timezone', () => {
     const pipe = new TimezoneDatePipe();
-    expect(pipe).toBeTruthy();
+
+    const date = pipe.transform(mockCityWeather.dt, mockCityWeather.timezone);
+    expect(date).toBe('05:10 pm');
   });
 });

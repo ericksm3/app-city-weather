@@ -11,8 +11,8 @@ export class ForecastHourlyComponent implements OnInit {
   @Input('hours') hours!: CityWeather[];
   @Input('timezone') timezone!: number;
 
-  constructor() { 
-   
+  constructor() {
+
   }
 
   ngOnInit(): void { }
