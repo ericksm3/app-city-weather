@@ -28,6 +28,10 @@ Each weather condition has his own theme. Here is a mock for all possible weathe
 ### Night
 ![Night Theme](https://i.ibb.co/m0cZPB4/night.jpg)
 
+## Install
+
+Run `npm install` to install app dependencies.
+
 ## Run local server
 
 Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`.
@@ -38,11 +42,11 @@ Run `ng test` or `npm test` to execute the unit tests.
 
 #### Coverage
 
-For coverage report run `npm run test:coverage`. This project has 100% coverage.
+Run `npm run test:coverage` to generate coverage report inside `coverage\app-city-weather\index.html` folder. This project has 100% code coverage.
 ![Coverage](https://i.ibb.co/kKkjT6K/coverage.jpg)
 
 ## Running tslint
-Added a few more rules to tslint, like `no-unused-variable` and `no-any`  ensure code quality.
+Added a few more rules to tslint, like `no-unused-variable` and `no-any` ensure code quality.
 
 Run `npm run lint`  to execute lint.
 
