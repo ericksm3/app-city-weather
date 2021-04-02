@@ -108,15 +108,15 @@ export class MockComponent implements OnInit {
       dt: 1617293967,
       id: 2759794,
       main: {temp: 9.83, feels_like: 7.14, temp_min: 9.44, temp_max: 10.56, pressure: 1024},
-      name: "Amsterdam",
-      sys: {type: 1, id: 1524, country: "NL", sunrise: 1617254074, sunset: 1617300819},
-      timezone: 7200,
+      name: "City",
+      sys: {type: 1, id: 1524, country: "Country", sunrise: 1, sunset: 1617293968},
+      timezone: 1,
       visibility: 10000,
       weather: [{
-        description: "clear sky",
+        description: "forecast description",
         icon: this.getIcon(t, 'night'),
         id: 800,
-        main: 'some text'
+        main: 'forecast'
       }],
       wind: {speed: 5.66, deg: 20}
     }
