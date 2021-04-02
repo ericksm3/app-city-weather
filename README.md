@@ -2,26 +2,41 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.6.
 
-## Development server
+## Aditional cities
+A `<select>` was added to the project to allow city region changes, since all european cities had almost the same weather constantly.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+There is european, asian and brazilians cities added in the mock city service.
 
-## Code scaffolding
+Also added one more city per region for layout purposes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Card
+Each card has his own forecast, current day, hour, temperature and wind speed.
 
-## Build
+Clicking on the card shows the forecast for the next **six** hours
+![Card](https://i.ibb.co/tsmRV7X/card.jpg)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Weather Themes
+Each weather condition has his own theme. Here is a mock for all possible weathers and their colors (day and night).
+
+#### Day
+![Day Theme](https://i.ibb.co/JqwTNSw/day.jpg)
+
+### Night
+![Night Theme](https://i.ibb.co/m0cZPB4/night.jpg)
+
+## Run local server
+
+Run `ng serve` or `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` or `npm test` to execute the unit tests.
 
-## Running end-to-end tests
+#### Coverage
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+For coverage report run `npm run test:coverage`. This project has 100% coverage.
+![Coverage](https://i.ibb.co/kKkjT6K/coverage.jpg)
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Contact
+Email info: erick.sm4@gmail.com
