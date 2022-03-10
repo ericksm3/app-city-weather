@@ -14,13 +14,13 @@ There are european, asian and brazilians cities added in the mock city service.
 Also added one more city per region for layout purposes.
 
 ## Card
-Each card has his own forecast, current day, hour, temperature and wind speed.
+Each card has its own forecast, current day, hour, temperature and wind speed.
 
 Clicking on the card shows the forecast for the next **six** hours
 ![Card](https://i.ibb.co/tsmRV7X/card.jpg)
 
 ## Weather Themes
-Each weather condition has his own theme. Here is a mock for all possible weathers and their colors (day and night).
+Each weather condition has its own theme. Here is a mock for all possible weathers and their colors (day and night).
 
 #### Day
 ![Day Theme](https://i.ibb.co/JqwTNSw/day.jpg)
